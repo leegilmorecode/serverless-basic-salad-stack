@@ -1,0 +1,59 @@
+{
+  "info": {
+    "_postman_id": "331a4bf2-93e1-481d-bcd3-8d012c348c46",
+    "name": "Serverless basic SALAD stack",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"quantity\": 12,\n    \"productId\": \"TAP-123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/orders/",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Order by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://your-rest-id.execute-api.your-region.amazonaws.com/prod/orders/a297e3fe-1b04-42e7-88f5-b8752cb6059a",
+          "protocol": "https",
+          "host": [
+            "your-rest-id",
+            "execute-api",
+            "your-region",
+            "amazonaws",
+            "com"
+          ],
+          "path": ["prod", "orders", "a297e3fe-1b04-42e7-88f5-b8752cb6059a"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
